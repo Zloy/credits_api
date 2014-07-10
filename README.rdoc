@@ -103,17 +103,23 @@ Get dummy up and running
 Open a browser and navigate to http://localhost:4000/api/users
 you should see 
 
-  [{"name":"Arnold Schwarzenegger","balance":0.0},{"name":"Bruce Willis","balance":1000.0},{"name":"Robert De Niro","balance":1998.0},{"name":"Samuel L. Jackson","balance":111.0}]
+  [{"name":"Arnold Schwarzenegger","balance":0.0},
+   {"name":"Bruce Willis","balance":1000.0},
+   {"name":"Robert De Niro","balance":1998.0},
+   {"name":"Samuel L. Jackson","balance":111.0}]
 
 Check the balance of Mr. Jackson, it should be <b>111.0</b>
 
   echo " " > post_data
-  ab -n 1000 -c 100 -p 1 http://localhost:4000/api/users/1/withdraw/1
+  ab -n 1000 -c 100 -p post_data http://localhost:4000/api/users/1/withdraw/1
 
 Open a browser and navigate again to http://localhost:4000/api/users
 now you should see 
   
-  [{"name":"Arnold Schwarzeneger","balance":0.0},{"name":"Bruce Willis","balance":1000.0},{"name":"Robert De Niro","balance":1998.0},{"name":"Samuel L. Jackson","balance":-889.0}]
+  [{"name":"Arnold Schwarzeneger","balance":0.0},
+   {"name":"Bruce Willis","balance":1000.0},
+   {"name":"Robert De Niro","balance":1998.0},
+   {"name":"Samuel L. Jackson","balance":-889.0}]
   
 Notice the balance of Mr. Jackson was changed, it should be now <b>-889</b>
 
