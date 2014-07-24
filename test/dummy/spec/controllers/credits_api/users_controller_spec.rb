@@ -35,6 +35,10 @@ RSpec.describe CreditsApi::UsersController, :type => :controller do
     post :deposit, {id: user1.id, amount: -500.0} # negative amount value
     response.status.should eql 403
 
+    # nonexistent id value
+    post :deposit, {id: 1000000, amount: 10}      # wrong id value
+    response.status.should eql 403
+
     # invalid id values
     post :deposit, {id: "x", amount: 10}    # bad id value
     response.status.should eql 403
