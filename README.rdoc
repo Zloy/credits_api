@@ -88,8 +88,9 @@ As I packed the solution as Rails engine gem, I supplied it with test Rails appl
   bundle install
   edit config/database.yml, specify right db params
   bundle exec rake credits_api:install:migrations
-  bundle exec RAILS_ENV=test rake db:setup
-  bundle exec spec
+  RAILS_ENV=test bundle exec rake db:create
+  RAILS_ENV=test bundle exec rake db:migrate
+  bundle exec rspec
 
 == Race conditions testing
 
