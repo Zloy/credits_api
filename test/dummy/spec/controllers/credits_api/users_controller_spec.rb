@@ -1,5 +1,4 @@
 require "rails_helper"
-require "byebug"
 require "concurrency_helper"
 
 RSpec.describe CreditsApi::UsersController, :type => :controller do
