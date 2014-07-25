@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/Zloy/credits_api.svg?branch=master)](https://travis-ci.org/Zloy/credits_api)
+[![Coverage Status](https://coveralls.io/repos/Zloy/credits_api/badge.png)](https://coveralls.io/r/Zloy/credits_api)
 
 # CreditsApi
 
