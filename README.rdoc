@@ -23,7 +23,7 @@ That simple, I like it )
 == Assumptions
 
 * As I'm free to use any framework, I choose Rails 4
-* Rails mountable engine seems to be suitable here
+* Rails mountable engine seems to be suitable
 * A user model is ActiveRecord::Base subclass in host application
 * A user model could be namespaced and could be named differently, e.g. Player
 * A user has a name as model attribute, name could be referred differently, e.g. as :login, or :email 
@@ -92,7 +92,7 @@ As I packed the solution as Rails engine gem, I supplied it with test Rails appl
   RAILS_ENV=test bundle exec rake db:migrate
   bundle exec rspec
 
-== Race conditions testing
+== Abusing (race conditions testing)
 
 Get dummy up and running
 
