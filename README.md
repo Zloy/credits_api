@@ -1,4 +1,4 @@
-[CI Build Status](https://travis-ci.org/Zloy/credits_api.svg?branch=master)
+[CI Build Status](http://travis-ci.org/Zloy/credits_api.svg?branch=master)
 
 # CreditsApi
 
