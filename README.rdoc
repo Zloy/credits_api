@@ -1,3 +1,4 @@
+"Build status"[https://travis-ci.org/Integralist/Sinderella.png?branch=master]
 == CreditsApi
 
 Being interviewed for RAILS  developer job I was asked to write an app as a test.
