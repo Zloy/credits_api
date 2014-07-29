@@ -13,4 +13,3 @@ gemspec
 # To use debugger
 # gem 'debugger'
 gem 'coveralls', require: false
-gem 'byebug'
