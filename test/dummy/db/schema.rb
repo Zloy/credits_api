@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20140710083907) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "credits_api_transactions", force: true do |t|
     t.integer  "user_id"
     t.float    "amount"
@@ -21,7 +24,7 @@ ActiveRecord::Schema.define(version: 20140710083907) do
     t.datetime "updated_at"
   end
 
-  add_index "credits_api_transactions", ["user_id"], name: "index_credits_api_transactions_on_user_id"
+  add_index "credits_api_transactions", ["user_id"], name: "index_credits_api_transactions_on_user_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string "name"
