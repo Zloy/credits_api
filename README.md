@@ -146,3 +146,12 @@ now you should see
 Notice the balance of Mr. Jackson was changed, it should be now <b>-889</b>
 
 Thus, despite there were performed a lot of concurrent requests, the balance was changed by the right value: ```111 - 1000 = -889```
+
+**ps**
+
+testing form post request
+```
+> cat app/post_data
+id=1&increase=1&decrease=2&commit=send
+> ab -n 1000 -c 20 -p app/post_data -v 4 -T 'application/x-www-form-urlencoded' http://localhost:3000/change_rate
+```
